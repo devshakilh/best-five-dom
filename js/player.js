@@ -41,7 +41,7 @@ function addToCart(element) {
     }
     cartArray.push(playerobj);
     // console.log(cartArray);
-    // console.log(cartArray.length);
+
 
     document.getElementById("total-added player").innerText = cartArray.length;
 
