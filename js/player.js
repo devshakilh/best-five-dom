@@ -39,12 +39,20 @@ function addToCart(element) {
     const playerobj = {
         playerName: playerName,
     }
-    cartArray.push(playerobj);
+    if (
+        cartArray.length < 5
+    ) {
+        cartArray.push(playerobj);
+        element.setAttribute('disabled', true);
+
+        document.getElementById("total-added player").innerText = cartArray.length;
+
+        display(cartArray);
+    }
+
+
     // console.log(cartArray);
 
 
-    document.getElementById("total-added player").innerText = cartArray.length;
-
-    display(cartArray);
 
 }
